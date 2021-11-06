@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset ="UTF-8">
+        <title>PM2.5 New York</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        
+    </head>    
+    <body>
+        <h1>PM2.5 New York's Summer vs Winter</h1>
+        <h3>when do we need a N95 mask to prevent PM2.5?</h3>
+        <p>Overall, we can see the air quality is better during the wimter. However, we might need a N95 to prevent PM2.5 in summer.</p>
+        <div id="summer">
+            <svg id= "barChart1" width= "150" height="300">
+                <svg x="36" y="140" width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="sun">
+                <path id="Oval" fill-rule="evenodd" clip-rule="evenodd" d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" stroke="#8881F1"/>
+                <path id="Line" d="M12 5V3" stroke="#8881F1" stroke-linecap="round" stroke-linejoin="round"/>
+                <path id="Line_2" d="M12 21V19" stroke="#8881F1" stroke-linecap="round" stroke-linejoin="round"/>
+                <path id="Line_3" fill-rule="evenodd" clip-rule="evenodd" d="M5 12H2H5Z" stroke="#8881F1" stroke-linecap="round" stroke-linejoin="round"/>
+                <path id="Line_4" fill-rule="evenodd" clip-rule="evenodd" d="M22 12H19H22Z" stroke="#8881F1" stroke-linecap="round" stroke-linejoin="round"/>
+                <path id="Line_5" fill-rule="evenodd" clip-rule="evenodd" d="M16.9497 7.05025L19.0711 4.92893L16.9497 7.05025Z" stroke="#8881F1" stroke-linecap="round" stroke-linejoin="round"/>
+                <path id="Line_6" fill-rule="evenodd" clip-rule="evenodd" d="M4.92893 19.0711L7.05025 16.9497L4.92893 19.0711Z" stroke="#8881F1" stroke-linecap="round" stroke-linejoin="round"/>
+                <path id="Line_7" fill-rule="evenodd" clip-rule="evenodd" d="M16.9497 16.9497L19.0711 19.0711L16.9497 16.9497Z" stroke="#8881F1" stroke-linecap="round" stroke-linejoin="round"/>
+                <path id="Line_8" fill-rule="evenodd" clip-rule="evenodd" d="M4.92893 4.92893L7.05025 7.05025L4.92893 4.92893Z" stroke="#8881F1" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                </svg>
+                <text x="36" y="220" fill="#8881F1" font-weight="600">Summer</text>
+            </svg>    
+        </div>
+        
+        <div id="winter">
+            <svg id="barChart2" width= "150" height="300">
+                <svg x="36" y="100" width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="snow">
+                <path d="M19.0512 17.9568C20.7223 17.6925 22 16.2455 22 14.5C22 12.7096 20.6556 11.2331 18.9212 11.0251C18.4555 8.17504 15.9818 6 13 6C10.7118 6 8.72277 7.28089 7.71081 9.16477C7.32556 9.0574 6.91948 9 6.5 9C4.01472 9 2 11.0147 2 13.5C2 15.8113 3.74258 17.7157 5.98563 17.9709C6.15443 17.9901 7 17.9568 7 17.9568" stroke="#6D66CF" stroke-linecap="round"/>
+                <path d="M16 18H10" stroke="#6D66CF" stroke-linecap="round"/>
+                <path d="M11.5 15.4019L14.5 20.5981" stroke="#6D66CF" stroke-linecap="round"/>
+                <path d="M14.7634 15.5729L11.2366 20.4271" stroke="#6D66CF" stroke-linecap="round"/>
+                </g>
+                </svg>
+                <text x="42" y="180" fill="#6D66CF" font-weight="600">Winter</text>
+            </svg>    
+        </div>
+        <div id="tooltip"></div>
+        <script src="https://d3js.org/d3.v7.js"></script>
+        <script type="module">
+                import * as d3 from "https://cdn.skypack.dev/d3@7";
+                const div = d3.selectAll("div");
+        </script>
+        <script src="app.js"></script>
+            <footer>
+            <div class="flex-container">
+                  <div>
+                        <p class="foot">Design By: <a href="https://dribbble.com/zorawan">Zora Wan</a> &nbsp;&nbsp; | &nbsp;&nbsp; Data Source:
+                        <a href="https://data.cityofnewyork.us/Environment/Air-Quality/c3uy-2p5r">NYC Open Data</a>
+                        </p>
+                        <p class="foot">Project for: Data Vis & Info Aesthetics form The New School Data Visualization Program</p>
+                  </div>
+                  <div>
+                      <p class="foot">Design Specification:
+                      </p>
+                      <p id="spec">
+                    I use ​Quicksand font to reflect the particle form. And bluish color tone to represent the sense of air. For the dataset, I only use the "Fine Particulate Matter (PM2.5)" value in the downloaded CSV and compare the mean for winter and summer. To provide better understanding of the concept, I will add the text "Summer" in the tooltip when hovering instead of years.
+                      </p>
+                  </div>
+            </div>
+        </footer>
+    </body>
+    
+    
+</html>

@@ -1,0 +1,87 @@
+
+body {
+  font-family: 'Courier Prime', monospace;
+  font-size:0.8em;
+  height:100%;
+  background-color:#FAF8F3;
+  
+}
+h1{
+  font-size:3em;
+  text-align: center;
+  padding:20px 0px 0px 0px;
+}
+
+h2{
+  font-size:1.4em;
+  text-align: center;
+  color:#747474;
+}
+
+#mytext{
+   -webkit-mask-image: url("reagan_p7.png");
+  -webkit-mask-size: 100%, auto;
+  text-align: justify;
+  padding:12px;
+}
+
+.grid-container{
+  grid-template-rows:center;
+  padding: 36px;
+}
+
+#title {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em #EA003C;  /*The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  /*letter-spacing: .1em;  Adjust as needed */
+  animation: 
+    typing 4.5s steps(50, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes border-right {
+  from { opacity: 100 }
+  to { opacity: 0 }
+}
+
+#mytext span:hover {
+  color: #fff;
+  cursor: pointer;
+  background:#EA003C;
+  padding:4px 4px 0px 4px;
+  border-radius:3px;
+}
+
+#tooltip{
+  font-size:1em;
+  color:#EA003C;
+  background-color:#fff;
+  padding:4px 4px 4px 4px;
+  border-radius:3px;
+}
+
+a{
+    color: #EA003C;
+}
+
+.flex-container {
+  display: flex;
+  text-align:inherit;
+  
+}
+
+.flex-container > div {
+  width: 50%;
+  margin: 20px;
+}
+
+.foot{
+  color:#747474;
+}

@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>Reagan</title>
+
+    <link rel="stylesheet" href="./styles.css"/>
+</head>
+<body>
+<h1 id="title">
+    1000 Words of Ronald Reagan
+</h1>
+<h2>
+    High-frequency words of Ronald Reagan from 1982 to 1988
+</h2>
+
+<div class="grid-container">
+
+<p id="mytext"></p>
+<p id="tooltip"></p>
+<footer>
+    <div class="flex-container">
+        <div>
+            <p class="foot">Design By: <a href="https://dribbble.com/zorawan">Zora Wan</a> &nbsp;&nbsp; | &nbsp;&nbsp; Data Source:
+                <a href="https://www.kaggle.com/rtatman/state-of-the-union-corpus-1989-2017">Kiggle</a>
+            </p>
+            <p class="foot">Project for: Data Vis & Info Aesthetics form The New School Data Visualization Program</p>
+        </div>
+        <div>
+            <p class="foot">Design Specification:
+            </p>
+            <p class="foot">
+                I use ​Courier Prime font to reflect the typewriter effect. The idea of showing the most frequent words as a paragraph is based on letters written by a typewriter. By combining Ronald Reagan's portrait and his words, this visualization will better present a sense and the feeling of him. I chose red to highlight the text because of the Republican party. These 1000 words are listed by their frequency from all of the speeches. When viewers hover on a word, they will see the number showing as a tooltip which indicates how many times it had been mentioned in Ronald Reagan's presidential speeches.
+            </p>
+        </div>
+    </div>
+</footer>
+</div>
+    <script src="https://unpkg.com/d3"></script>
+    <script src="./app.js"></script>
+</body>
+</html>

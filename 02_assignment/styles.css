@@ -1,0 +1,61 @@
+body{
+    font-family: 'Quicksand', sans-serif;
+    background-color:#F6F7FB;
+}
+
+h1{
+    font-family:inherit;
+    text-align:center;
+    color: #383874;
+    text-transform: uppercase;
+}
+
+#summer{
+    background-color:#F6F7FB;
+}
+
+#winter{
+    background-color:#DCDFF2;
+}
+
+.Xaxis{
+    font-size:15px;
+    font-family:inherit;
+    font-weight:500;
+}
+
+h3, p{
+    font-family: inherit;
+    color: #383874;
+    display: block;
+    text-align: center;
+}
+
+.foot{
+    font-family: inherit;
+    font-weight:500;
+    color: #383874;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+#spec{
+    color: #383874;
+    text-align: left;
+    font-weight:400;
+}
+
+a{
+    color: #AE35EB;
+}
+
+.flex-container {
+  display: flex;
+  text-align: middle;
+}
+
+.flex-container > div {
+  width: 50%;
+  margin: 10px;
+  padding: 20px;
+}
