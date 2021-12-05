@@ -1,47 +1,182 @@
-@import url('https://fonts.googleapis.com/css2?family=Forum&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;700;800;900&family=Noto+Serif+Display:wght@100;200;300;400;500;600;700;800;900&display=swap');
+html{
+    background-color:#EDEAF2;
+}
 body{
-    font-family: 'Forum', cursive;
-    font-family: 'Roboto', sans-serif;
-    margin:36px;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Noto Serif Display', serif;
     width:960px;
+    margin:auto;
+}
 
-}
-img{
-    margin:12px 36px 36px 0px;
-    width:960px;
-}
+
 h1{
-    font-family: 'Forum', cursive;
-    font-size:2.4em;
+    font-family: 'Noto Serif Display', cursive;
+    font-size:3em;
     color:#101d42;
+    text-align:center;
+    line-height:1.4em;
+    font-weight:300;
 }
-mark{
-    font-family: 'Roboto', sans-serif;
-    font-size:1em;
-    font-weight:700;
-    color:#89d2dc;
-    background-color:#101d42;
+h2{
+    font-family: 'Noto Serif Display', cursive;
+    font-size:1.8em;
+    color:#101d42;
+    text-align:center;
+    padding: 60px 0px 60px 0px;
 }
 h3{
-    font-family: 'Roboto', sans-serif;
-    font-size:1.6em;
+    font-family: 'Montserrat', sans-serif;
+    font-size:1.2em;
+    font-weight:600;
+    color:#101d42;
+}
+
+p{
+    font-family: 'Montserrat', sans-serif;
+    font-size:1em;
     font-weight:300;
     color:#101d42;
+    line-height:1.8em;
+}
+.ColorIntro{
+    font-weight:300;
 }
 .hero{
-    color:#101d42;
-    font-weight:500;
-    font-size: 1.4em;
-    line-height:2em;
-    padding:12px 0px 48px 0px;
+    margin:auto;
+    text-align:center;
+    padding-bottom:100px;
+    position:relative;
 }
-/*#color{*/
-/*    font-family: inherit;*/
-/*    font-weight:900;*/
-/*    font-size: 1.8em;*/
-/*    line-height:2em;*/
-/*}*/
-/*span:hover {*/
-/*  color: #89d2dc;*/
-/*  cursor: pointer;*/
-/*}*/
+.nameCard, .PaletteLabel{
+    display: flex;
+    flex-direction: row;
+    height:46px;
+    width:100%;
+    align-items:center;
+    padding-top:60px;
+}
+svg{
+    align-self: flex-start;
+    padding-right:15px;
+}
+#heroContainer {
+    display: flex;
+    flex-direction: row;
+
+    position:relative;
+    height:200px;
+    padding-bottom:40px;
+    border-bottom: 1px solid #D5D0DD;
+}
+#swatchIntro, #palettehIntro {
+    margin:auto;
+    padding-bottom:40px;
+    border-bottom: 1px solid #D5D0DD;
+}
+
+.heroItem{
+    justify-content:space-between;
+}
+.heroName{
+    text-align:center;
+    font-weight:500;
+    /*padding-left:0px;*/
+}
+#gs_gallery, #pc_gallery, #pg_gallery, #vg_gallery{
+    padding:24px 0px 80px 61px;
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height:auto;
+    border-bottom: 1px solid #D5D0DD;
+    gap:24px;
+}
+img {
+  width: 260px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top:12px;
+}
+.img-card{
+    /*flex-grow: 1;*/
+    width:260px;
+}
+.avatar{
+    width:46px;
+    padding-right:15px;
+    padding-top:0px;
+    margin:0px;
+}
+.imgSwatch{
+    border: 1px solid #D5D0DD;
+    background-color:#fff;
+    border-radius:6px;
+    height:auto;
+    width:284px;
+}
+
+.swatches{
+    width:260px;
+    height:64px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom:12px;
+}
+.swatch{
+    width:52px;
+    height:52px;
+    float:left;
+    margin-top:12px;
+}
+#gs_paletteBar, #pc_paletteBar, #pg_paletteBar, #vg_paletteBar{
+    width:100%;
+    height:auto;
+    display: flex;
+    flex-direction:column;
+    float:left;
+    padding:24px 0px 24px 61px;
+    border-bottom: 1px solid #D5D0DD;
+}
+.red, .yellow, .green, .cyan, .blue, .magenta{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+}
+.label{
+    display:inline-block;
+    font-family:'Montserrat', sans-serif;
+    font-weight:500;
+    font-size:1.2em;
+    padding-top:36px;
+}
+.paletteBar{
+    display:flex;
+    flex-direction:column;
+}
+.foot{
+    padding:20px 60px 0px 60px;
+    font-family:'Montserrat', sans-serif;
+    font-size:1em;
+    line-height:1.5em;
+    font-weight:500;
+    color:#505A76;
+}
+.row:after {
+    content: "";
+    display: flex;
+    flex-direction:row;
+    clear: both;
+}
+.column {
+    float: left;
+    width: 50%;
+    height:400px;
+}
+a{
+    color:#A88ACD;
+    text-decoration: none;
+}
