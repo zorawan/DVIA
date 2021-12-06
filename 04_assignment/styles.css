@@ -1,0 +1,95 @@
+body{
+    margin: 0px;
+    background-color:#e7ff94;
+    font-family: 'Montserrat', sans-serif;
+}
+#map{
+    position: relative;
+    top: 0; 
+    bottom: 0; 
+    width: 100%;
+    height:500px;
+    align:center;
+}
+ /*body { */
+ /*   margin: 0; */
+ /*   padding: 0; */
+ /* }*/
+ /*#map { */
+ /*   position: absolute; */
+ /*   top: 0; */
+ /*   bottom: 0; */
+ /*   width: 100%; */
+ /* }*/
+.hero{
+    font-family: inherit;
+    font-weight:900;
+    font-size: 6em;
+    line-height:2em;
+    color:#071e30;
+    padding:60px;
+}
+.legend{
+    font-family: inherit;
+    font-weight:900;
+    font-size: 3em;
+    line-height:1em;
+    color:#071e30;
+    padding-left:60px;
+}
+#summary{
+    font-family: inherit;
+    font-weight:700;
+    font-size: 2em;
+    line-height:1.6em;
+    color:#071e30;
+    padding:0px 60px 60px 60px;
+    width:100%;
+    height:420px;
+}
+
+.foot{
+    padding:20px 60px 0px 60px;
+    font-family:inherit;
+    font-size:1.1em;
+    line-height:1.5em;
+    font-weight:500;
+    color:#184E77;
+}
+a{
+    color:#76C893;
+}
+
+* {
+  box-sizing: border-box;
+}
+.column {
+  float: left;
+  width: 50%;
+  height:400px;
+  padding: 10px;
+  background-color:#fefefe;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#facts{
+    font-family: inherit;
+    font-weight:700;
+    font-size: 1.4em;
+    color:#e7ff94;
+    margin-left:60px;
+    margin-top:60px;
+}
+#year{
+    font-family: inherit;
+    font-weight:900;
+    font-size: 1.8em;
+    line-height:2em;
+}
+span:hover {
+  color: #e7ff94;
+  cursor: pointer;
+}
