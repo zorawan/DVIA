@@ -1,14 +1,22 @@
-         ___        ______     ____ _                 _  ___  
-        / \ \      / / ___|   / ___| | ___  _   _  __| |/ _ \ 
-       / _ \ \ /\ / /\___ \  | |   | |/ _ \| | | |/ _` | (_) |
-      / ___ \ V  V /  ___) | | |___| | (_) | |_| | (_| |\__, |
-     /_/   \_\_/\_/  |____/   \____|_|\___/ \__,_|\__,_|  /_/ 
+# Zora's Projects for Data Visualization & Info Aesthetics - Data Visualization MS - Parsons School of Design | The New School
  ----------------------------------------------------------------- 
 
+## Total 6 projects in a semester
 
-Hi there! Welcome to AWS Cloud9!
+### Assignment 1 - Time
+Time As A Sunflower
 
-To get started, create some files, play with the terminal,
-or visit https://docs.aws.amazon.com/console/cloud9/ for our documentation.
+### Assignment 2 - Air Quality
+PM2.5 Winter or Summer
 
-Happy coding!
+### Assignment 3 - Iris Dataset
+Practice with Iris Dataset
+
+### Assignment 4 - Text of Presidential Speeches
+Reagan's speeches from 1982 to 1988 - What did he say?
+
+### Assignment 5 - Earthquakes on Map
+Earthquakes 2021 Big and Small
+
+### Assignment 6 - Final Assignment - Illusion
+[Colors of Post Impressionism in The Metropolitan Museum of Art](https://zorawan.github.io/DVIA/05_final/index.html)
