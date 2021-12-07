@@ -141,7 +141,7 @@ function displayImagesJS(json, artist) {
             }
         });
     },
-        2000);
+        3000);
     
 }
 
