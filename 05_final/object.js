@@ -42,13 +42,13 @@ function loadObject(objectIDs) {
             		    let url = encodeURI(objectBaseURL + objectIDs[index]);
             		    setTimeout(() => {  getData(url); }, 1000);
             		} else {
-            		    fs.writeFileSync('./pc_object.json', JSON.stringify (objectArray), 'utf8');
+            		    fs.writeFileSync('./vg_object.json', JSON.stringify (objectArray), 'utf8');
             		    console.log("all finished: " + index);
             		}
             	}
             catch (error) {
                 console.log(error);
-                setTimeout(() => {  getData(url); }, 60000);
+                setTimeout(() => { getData(url); }, 60000);
                 //fs.writeFileSync('./vg_object.json', JSON.stringify (objectArray), 'utf8');
             }
     }
@@ -56,5 +56,5 @@ function loadObject(objectIDs) {
     let url = encodeURI(objectBaseURL + objectIDs[0]);
     getData(url);
 }
-const search = "Paul Cezanne";
+const search = "Vincent Van Gogh";
 fetchSearchData(search, 0);

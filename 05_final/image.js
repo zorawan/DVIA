@@ -22,7 +22,7 @@ function downloadData(artist) {
     if (err) console.log(err);
 
     JSON.parse(data).forEach(e => {
-      if (e.medium== "Oil on canvas"){
+      if (e.medium== "Oil on canvas" || e.medium == "Oil on wood"){
       console.log('Downloading ' + e.title);
       downloadImage(artist, e.primaryImageSmall, e.primaryImageSmall.substring(e.primaryImageSmall.lastIndexOf("/") + 1), function(){
         console.log('Finished Downloading ' + e.primaryImageSmall.substring(e.primaryImageSmall.lastIndexOf("/") + 1));

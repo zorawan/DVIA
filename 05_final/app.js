@@ -22,7 +22,7 @@ function displayImagesJS(json, artist) {
     vibrantPalate.className = 'swatches';
     
     json.map(item => {
-        if (item.medium == "Oil on canvas") {
+        if (item.medium == "Oil on canvas" || item.medium == "Oil on wood") {
             var imageCard = document.createElement('div');
             imageCard.className = 'imgSwatch';
             var img = document.createElement('img');
