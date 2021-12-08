@@ -260,3 +260,16 @@ h4{
     font-weight:300;
     color:#505A76;
 }
+.script{
+    padding-left:60px;
+}
+.titleCard{
+    margin-top:46px;
+    padding-left:12px;
+    position: relative;
+    height:auto;
+    display:inline-block;
+}
+#formula{
+    font-weight:500;
+}
