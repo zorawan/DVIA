@@ -195,29 +195,29 @@ a{
     border-radius:6px 6px 0px 0px;
     font-family:'Montserrat', sans-serif;
     font-size:1em;
-    font-weight:400;
-    color:#fff;
+    font-weight:500;
+    color:#101d42;
     padding:20px;
     position:inherit;
     margin-bottom:24px;
 }
 #C1{
-    background-color:#BF4040;
+    background-color:#FF4D4D;
 }
 #C2{
-    background-color:#BFBF40;
+    background-color:#FFFF4D;
 }
 #C3{
-    background-color:#40BF40;
+    background-color:#4DFF4D;
 }
 #C4{
-    background-color:#40BFBF;
+    background-color:#4DFFFF;
 }
 #C5{
-    background-color:#4040BF;
+    background-color:#4D4DFF;
 }
 #C6{
-    background-color:#BF40BF;
+    background-color:#FF4DFF;
 }
 .ratingCard{
     display:flex;
@@ -249,8 +249,8 @@ a{
 .HSL{
     font-family:'Montserrat', sans-serif;
     font-size:2.4em;
-    font-weight:100;
-    color:#fff;
+    font-weight:200;
+    color:#101d42;
     margin:0px;
 }
 h4{
@@ -312,4 +312,10 @@ rect{
 }
 .rectA{
     background-Color:#FCFAFF;
+}
+#wheel{
+    padding-top:0px;
+    border: 1px solid #D5D0DD;
+    border-radius:6px;
+    width:420px;
 }
