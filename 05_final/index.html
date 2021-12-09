@@ -36,7 +36,17 @@
         <h2>Swatch</h2>
         <div id="swatchIntro">
             <p class="ColorIntro">Color swatches were created in the following order:</p>
-            <h3>Vibrant | Muted | Dark Vibrant | Dark Muted | Light Vibrant</h3>
+            <div id="topSwatch">
+                <img id="topImage" src="./vg_downloads/DP229743.jpg">
+                <div id="containter">
+                    <rect class="rectA"><p>Vibrant</P></rect>
+                    <rect><P>Muted</P></rect>
+                    <rect class="rectA"><P>Dark Vibrant</P></rect>
+                    <rect><P>Dark Muted</P></rect>
+                    <rect class="rectA"><P>Light Vibran</P></rect>
+                </div>
+            </div>
+            
         </div>
         <h2>Palette</h2>
         <div id="palettehIntro">
@@ -64,7 +74,7 @@
     <div id="gs_paletteBar" class="paletteBar"></div>
     <div class="nameCard">
         <img class="avatar" src="./access/PC_Avata.svg" alt="PC Avatar" width="46" height="46">
-    <h  3>Swatches from Paul Cezanne</h3>
+    <h3>Swatches from Paul Cezanne</h3>
     </div>
     <p class="script">4-5 colors in a swatch represent the painting's vibrant, muted, dark-vibrant, dark-muted, light-vibrant colors.</p>
      <div id=pc_gallery></div>
@@ -96,7 +106,7 @@
         <div id="pg_paletteBar" class="paletteBar"></div>
     <div class="nameCard">
     <img class="avatar" src="./access/VG_Avata.svg" alt="VG Avatar" width="46" height="46">
-    <h3 id="name">Swatches from Vincent Van Gogh</h3>
+    <h3 class="name">Swatches from Vincent Van Gogh</h3>
     </div>
     <p class="script">4-5 colors in a swatch represent the painting's vibrant, muted, dark-vibrant, dark-muted, light-vibrant colors.</p>
     <div id=vg_gallery></div>
@@ -110,9 +120,9 @@
         <p class="script">All the colors in swatches are divided by 6 hues.</p>
         <div id="vg_paletteBar" class="paletteBar"></div>
         <div class="titleCard">
-            <h3 id="name">Who uses the hue the most?</h3>
-            <h4>Comparing the palettes from 4 artists, here are the winners for each hue.</h4>
-            <p id="formula"><b>(ƒ)</b> -- Formula: Total in a hue from a palette / Total paintings --</p>
+            <h2 class="name">Who uses the hue the most?</h2>
+            <h3>Comparing the palettes from 4 artists, here are the winners for each hue.</h3>
+            <h3><(ƒ) Formula: Total in a hue from a palette / Total paintings</h3>
         </div>
         <div id="comp">
             
@@ -246,6 +256,15 @@
                 </div>
             </div>
         </div>
+        <!--<div class="titleCard">-->
+        <!--    <h3 class="name">Which hue is the most popular?</h3>-->
+        <!--    <h4>Total hues from the paintings</h4>-->
+        <!--</div>  -->
+        <!--<div class="comp">-->
+        <!--    <div class="colorRating" id="YRGCM">-->
+        <!--         <p>Yellow</p>-->
+        <!--    </div>-->
+        <!--</div>-->
     <footer id="footer">
         <div class="row">
             <div class="column">

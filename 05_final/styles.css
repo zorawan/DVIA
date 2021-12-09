@@ -264,12 +264,52 @@ h4{
     padding-left:60px;
 }
 .titleCard{
-    margin-top:46px;
-    padding-left:12px;
+    width:100%;
+    margin-top:40px;
     position: relative;
     height:auto;
     display:inline-block;
+    text-align:center;
 }
 #formula{
     font-weight:500;
+}
+.colorRating{
+    border: 1px solid #D5D0DD;
+    background-color:#fff;
+    border-radius:6px;
+    height:284px;
+    width:284px;
+    margin-bottom:48px;
+}
+#containter{
+    display:flex;
+    flex-direction:row;
+    padding:12px;
+}
+rect{
+    height:76px;
+    width:76px;
+    background-color: #EDEAF2;
+    align-self: auto;
+    color:#101d42;
+    vertical-align: middle;
+    padding: 6px 0px 12px 0px;
+    border: 2px solid #fff;
+    
+
+}
+#topSwatch{
+    width:420px;
+    border: 1px solid #D5D0DD;
+    background-color:#fff;
+    border-radius:6px;
+    height:auto;
+    margin:auto;
+}
+#topImage{
+    width:396px;
+}
+.rectA{
+    background-Color:#FCFAFF;
 }
