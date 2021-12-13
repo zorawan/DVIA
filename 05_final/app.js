@@ -177,19 +177,20 @@ const svg = d3.select("#plot")
     .attr("height", height + margin.top + margin.bottom)
     .append("g")
     .attr("transform", `translate(${margin.left}, ${margin.top})`)
-    .style("background-color","#fff")
+    .style("background-color","#fff");
 
 
     // Add X axis
     const x = d3.scaleLinear()
     .domain([0, 1])
     .range([ 0, width ]);
+    
     svg.append("g")
     .attr("transform", `translate(0, ${height})`)
     .call(d3.axisBottom(x))
     .attr("color", "#9194AB")
     .style("font-family","Montserrat")
-    .style("font-size","1em");
+    .style("font-size","0.8em");
 
     // Add Y axis
     const y = d3.scaleLinear()
@@ -199,7 +200,9 @@ const svg = d3.select("#plot")
     .call(d3.axisLeft(y))
     .attr("color", "#9194AB")
     .style("font-family","Montserrat")
-    .style("font-size","1em");
+    .style("font-size","0.8em");
+
+
 
     // Add dots
     svg.append('g')
@@ -212,7 +215,7 @@ const svg = d3.select("#plot")
         .attr("cy", function (d) { return y(d.lightness); } )
         .attr("r", function(d){
             if (d.artist == artist) {
-                return 10;
+                return 12;
             } else {
                 return 5;
             }
@@ -228,10 +231,11 @@ const svg = d3.select("#plot")
             if (d.artist == artist){
                 return 1;
             } else {
-                return 0.5;
+                return 0.6;
             }
         })
         .style("fill", function(d) {return d.hex});
+
      
     svg.append("text")
         .attr("transform", "translate(725,560)")
@@ -239,7 +243,9 @@ const svg = d3.select("#plot")
         .attr("fill", "#4E5878")
         .text("Low <- Saturation -> High")
         .style("font-family","Montserrat")
-        .style("font-weight","500");
+        .style("font-weight","500")
+        .style("font-size", "1em");
+    
         
     svg.append("text")
         // .style("text-anchor", "start")
@@ -249,18 +255,15 @@ const svg = d3.select("#plot")
         .style("font-family","Montserrat")
         .style("font-weight","500")
         .attr("transform", "rotate(90)")
-        .attr("transform", "translate(15,10)");
+        .attr("transform", "translate(15,10)")
+        .style("font-size", "1em");
         
     d3.selectAll('g.tick')
     .select('line')
-        .remove()
+        .remove();
 
 
 }
-
-
-
-
 
 
 function handleClick(radio) {
@@ -276,4 +279,4 @@ var artist = "all";
 setTimeout(() => {
     //use d3 to show
     showD3(allColorPalette, artist);
-}, 5000);
+}, 4000);

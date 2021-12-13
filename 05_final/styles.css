@@ -363,17 +363,10 @@ rect{
     background-color: #B4B6CD;
     border: 1px solid #9194AB;
 }
-#GS{
-    mask-image:url(./access/GS_Avata.svg);
-}
 
 .top{
     stroke-width: 2px;
     stroke: #fff;
-    box-shadow:1px 1px 2px black;
-}
-.radioImg{
-    opacity:0.5;
-    width:60px;
-    height:60px;
+    box-shadow: 0 0 0 3px #e78267;
+
 }
