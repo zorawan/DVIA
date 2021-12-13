@@ -3,6 +3,7 @@
 // "d3" is globally available
 // because we have the d3 code
 // in our index.html file
+var allColorPalette = [];
 
 function loadImage(artist) {
   // load JSON using d3.json
@@ -45,6 +46,15 @@ function displayImagesJS(json, artist) {
                         swatchNode.style.backgroundColor = swatches[swatch].getHex();
                         swatchesNode.appendChild(swatchNode);
                         vibrantPalate.push(swatches[swatch]);
+                        
+                        var color = {};
+                        var hsl = swatches[swatch].getHsl();
+                        color.artist = artist;
+                        color.hue = hsl[0];
+                        color.saturation = hsl[1];
+                        color.lightness = hsl[2];
+                        color.hex = swatches[swatch].getHex();
+                        allColorPalette.push(color);
                     }
                 /*
                  * Results into:
@@ -115,7 +125,7 @@ function displayImagesJS(json, artist) {
         labelM.innerHTML += 'MAGENTA';
         magenta.before(labelM);
 
-        console.log(artist + ": " + vibrantPalate.length);
+        // console.log(artist + ": " + vibrantPalate);
 
         vibrantPalate.sort((a, b) => a.getHsl()[2] - b.getHsl()[2]);
         
@@ -125,7 +135,7 @@ function displayImagesJS(json, artist) {
             colorNode.className = 'swatch';
             colorNode.style.backgroundColor = item.getHex();
             var hue = Math.floor(item.getHsl()[0] * 360);
-            console.log('hue: ' + hue + "; hex: " + item.getHex());
+          
             if (hue <= 30 || hue > 330) {
                 red.appendChild(colorNode);
             } else if (hue <= 65) {
@@ -133,19 +143,137 @@ function displayImagesJS(json, artist) {
             } else if ( hue <= 150) {
                 green.appendChild(colorNode);
             } else if ( hue <= 200) {
-                cyan.appendChild(colorNode);
+                cyan.appendChild(colorNode);    
             } else if ( hue <= 270) {
                 blue.appendChild(colorNode);
             } else if ( hue <= 330) {
                 magenta.appendChild(colorNode);
             }
         });
+       
     },
         3000);
     
+}
+
+// var artist = document.querySelector('input[name="radioFruit"]:checked').value;
+
+
+function showD3(data, artist) {
+    // set the dimensions and margins of the graph
+const margin = {top: 30, right: 30, bottom: 60, left: 90},
+        width = 960 - margin.left - margin.right,
+        height = 660 - margin.top - margin.bottom;
+    
+// append the svg object to the body of the page
+    var parent = document.getElementById("plot");
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+    }
+    
+const svg = d3.select("#plot")
+    .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", `translate(${margin.left}, ${margin.top})`)
+    .style("background-color","#fff")
+
+
+    // Add X axis
+    const x = d3.scaleLinear()
+    .domain([0, 1])
+    .range([ 0, width ]);
+    svg.append("g")
+    .attr("transform", `translate(0, ${height})`)
+    .call(d3.axisBottom(x))
+    .attr("color", "#9194AB")
+    .style("font-family","Montserrat")
+    .style("font-size","1em");
+
+    // Add Y axis
+    const y = d3.scaleLinear()
+    .domain([0, 1])
+    .range([ height, 0]);
+    svg.append("g")
+    .call(d3.axisLeft(y))
+    .attr("color", "#9194AB")
+    .style("font-family","Montserrat")
+    .style("font-size","1em");
+
+    // Add dots
+    svg.append('g')
+    .selectAll("dot")
+    .data(data)
+    .join("circle")
+        .attr("cx", function (d) { 
+            console.log(d);
+            return x(d.saturation); } )
+        .attr("cy", function (d) { return y(d.lightness); } )
+        .attr("r", function(d){
+            if (d.artist == artist) {
+                return 10;
+            } else {
+                return 5;
+            }
+        })
+        .classed("top", function(d){
+            if (d.artist == artist) {
+                return true;
+            } else {
+                return false;
+            }
+        })
+        .style("opacity", function(d){
+            if (d.artist == artist){
+                return 1;
+            } else {
+                return 0.5;
+            }
+        })
+        .style("fill", function(d) {return d.hex});
+     
+    svg.append("text")
+        .attr("transform", "translate(725,560)")
+        .style("text-anchor", "middle")
+        .attr("fill", "#4E5878")
+        .text("Low <- Saturation -> High")
+        .style("font-family","Montserrat")
+        .style("font-weight","500");
+        
+    svg.append("text")
+        // .style("text-anchor", "start")
+        .text("High")
+        .text("Lightness")
+        .attr("fill", "#4E5878")
+        .style("font-family","Montserrat")
+        .style("font-weight","500")
+        .attr("transform", "rotate(90)")
+        .attr("transform", "translate(15,10)");
+        
+    d3.selectAll('g.tick')
+    .select('line')
+        .remove()
+
+
+}
+
+
+
+
+
+
+function handleClick(radio) {
+    showD3(allColorPalette, radio.value);
 }
 
 loadImage('gs');
 loadImage('pc');
 loadImage('pg');
 loadImage('vg');
+
+var artist = "all";
+setTimeout(() => {
+    //use d3 to show
+    showD3(allColorPalette, artist);
+}, 5000);

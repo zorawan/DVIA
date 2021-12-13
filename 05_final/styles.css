@@ -195,29 +195,30 @@ a{
     border-radius:6px 6px 0px 0px;
     font-family:'Montserrat', sans-serif;
     font-size:1em;
-    font-weight:500;
-    color:#101d42;
+    font-weight:400;
+    /*color:#101d42;*/
+    color:#fff;
     padding:20px;
     position:inherit;
     margin-bottom:24px;
 }
 #C1{
-    background-color:#FF4D4D;
+    background-color:#B5A8A4;
 }
 #C2{
-    background-color:#FFFF4D;
+    background-color:#B5B595;
 }
 #C3{
-    background-color:#4DFF4D;
+    background-color:#93B293;
 }
 #C4{
-    background-color:#4DFFFF;
+    background-color:#90ADB3;
 }
 #C5{
-    background-color:#4D4DFF;
+    background-color:#9C9CB5;
 }
 #C6{
-    background-color:#FF4DFF;
+    background-color:#BCA8BC;
 }
 .ratingCard{
     display:flex;
@@ -249,8 +250,9 @@ a{
 .HSL{
     font-family:'Montserrat', sans-serif;
     font-size:2.4em;
-    font-weight:200;
-    color:#101d42;
+    font-weight:100;
+    /*color:#101d42;*/
+    color:#fff;
     margin:0px;
 }
 h4{
@@ -318,4 +320,60 @@ rect{
     border: 1px solid #D5D0DD;
     border-radius:6px;
     width:420px;
+}
+#plot{
+    padding:24px 0px 80px 0px;
+    border-bottom: 1px solid #D5D0DD;
+}
+
+/*radio button*/
+#radio{
+    margin:auto;
+    display:flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    padding-bottom:0px 0px 36px 60px;
+}
+.radio-toolbar input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+.radio-toolbar label {
+    display: inline-block;
+    color:#fff;
+    background-color: #9194AB;
+    padding: 10px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    border: 1px solid #9194AB;
+    border-radius: 6px;
+}
+.radio-toolbar input[type="radio"]:checked + label {
+    color:#fff;
+    background-color:#101D42;
+    border-color: #9194AB;
+}
+.radio-toolbar input[type="radio"]:focus + label {
+    color:#fff;
+    border: 1px solid #4E5878;
+}
+.radio-toolbar input[type="radio"]:hover + label {
+    color:#fff;
+    background-color: #B4B6CD;
+    border: 1px solid #9194AB;
+}
+#GS{
+    mask-image:url(./access/GS_Avata.svg);
+}
+
+.top{
+    stroke-width: 2px;
+    stroke: #fff;
+    box-shadow:1px 1px 2px black;
+}
+.radioImg{
+    opacity:0.5;
+    width:60px;
+    height:60px;
 }
