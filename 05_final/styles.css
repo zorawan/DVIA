@@ -314,6 +314,12 @@ rect{
 }
 .rectA{
     background-Color:#FCFAFF;
+    justify-content: center;
+    align-items: center;
+}
+rect.p{
+    justify-content: center;
+    align-items: center;
 }
 #wheel{
     padding-top:0px;
